@@ -32,14 +32,3 @@ def sort_on(d):
 
 def char_count_report(book_name): #Refines character count into human readablie report of alpha num list.
     report_data = char_count(book_name)
-    sorted_data = []
-    scrubbed_data = []
-    for ch in report_data:
-        scrubbed_data.append({"char": ch, "num": report_data[ch]})
-    sorted_data.sort(reverse=True, key=sort_on)
-    for item in sorted_data:
-        if item["char"].isalpha():
-            scrubbed_data.append
-
-            
-    return scrubbed_data
