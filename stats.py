@@ -30,5 +30,11 @@ def char_count(book_name): #Counts total occurances of each character in the fil
 def sort_on(d):
     return d["num"]
 
-def char_count_report(book_name): #Refines character count into human readablie report of alpha num list.
-    report_data = char_count(book_name)
+def char_count_data(book_name): #Refines character count into human readablie report of alpha num list.
+    sorted_list = []
+    injest = char_count(book_name)
+    for ch in injest:
+        sorted_list.append({"char": ch, "num": injest[ch]})
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
+    
