@@ -1,9 +1,9 @@
 '''
 this file contains all of the functions related to data analasys of a selected book
-
+get_book_text() is the starting point for the report functions, and char_count_report
+relies on having the standard char_count function to generate the data it manipulates.
 '''
-#book_name = "frankenstein.txt"
-#BOOK_DIR_PATH = "../bookbot/books/" #Global Variable to books folder
+
 def get_book_text(book_name): #Book file handler, Reads contents to ""
     
     file_path = book_name
