@@ -17,10 +17,9 @@ def word_count(book_name): #Counts all words in file, Dependent on get_book_text
     return len(words)
 
 def char_count(book_name): #Counts total occurances of each character in the file
-    book_text = get_book_text(book_name)
-    lowercase_book_text = book_text.lower()
+    book_text = get_book_text(book_name).lower()    
     characters = {}
-    for character in lowercase_book_text:
+    for character in book_text:
         if character not in characters:
             characters[character] = 1
         else:
@@ -31,4 +30,10 @@ def sort_on(d):
     return d["num"]
 
 def char_count_report(book_name): #Refines character count into human readablie report of alpha num list.
-    report_data = char_count(book_name)
+    sorted_list = []
+    injest = char_count(book_name)
+    for ch in injest:
+        if ch.isalpha():
+            sorted_list.append({"char": ch, "num": injest[ch]})
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list
