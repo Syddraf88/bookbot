@@ -2,11 +2,11 @@
 this file contains all of the functions related to data analasys of a selected book
 
 '''
-book_name = "frankenstein.txt"
-BOOK_DIR_PATH = "../bookbot/books/" #Global Variable to books folder
+#book_name = "frankenstein.txt"
+#BOOK_DIR_PATH = "../bookbot/books/" #Global Variable to books folder
 def get_book_text(book_name): #Book file handler, Reads contents to ""
     
-    file_path = BOOK_DIR_PATH + book_name
+    file_path = book_name
     with open(file_path) as f:
         contents = f.read()
         return contents
